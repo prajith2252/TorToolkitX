@@ -2,9 +2,9 @@ import os
 
 from ..config.ExecVarsSample import ExecVars
 
-dburl = os.environ.get("DATABASE_URI", None)
+dburl = os.environ.get("DATABASE_URL", None)
 if dburl is None:
-    dburl = ExecVars.DATABASE_URI
+    dburl = ExecVars.DATABASE_URL
 
 
 if "mongo" in dburl:

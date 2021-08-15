@@ -37,12 +37,12 @@ except:
         REMAINING_STR = "▱"
 
         # DB URI for access
-        DATABASE_URI = (
+        DATABASE_URL = (
             "dbname=tortk user=postgres password=your-pass host=127.0.0.1 port=5432"
         )
 
         # UNCOMMENT THE BELOW LINE WHEN USING CONTAINER AND COMMENT THE UPPER LINE
-        # DATABASE_URI = "dbname=tortk user=postgres password=your-pass host=db port=5432"
+        # DATABASE_URL = "dbname=tortk user=postgres password=your-pass host=db port=5432"
 
         # Use the central update (everything will be updated in one msg)
         CENTRAL_UPDATE = True

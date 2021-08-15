@@ -91,7 +91,7 @@ Steps:-
       3. `BOT_TOKEN`
       4. `ALD_USR`
       5. `BASE_URL_OF_BOT`
-      6. `Uncomment the below DATABASE_URI and comment out the above DATABASE_URI`
+      6. `Uncomment the below DATABASE_URL and comment out the above DATABASE_URL`
       7. Also if the given procedure dosent work then set  `IS_VPS` to True and if you want to change the port when IS_VPS is true then change `SERVPORT` to your desired port number. (Note this should be used as backup)
 
 3. After that execute these commands in root of the repo where tortoolkit folder is located.
@@ -142,7 +142,7 @@ Steps:-
        3.  `BOT_TOKEN`
        4.  `ALD_USR`
        5.  `BASE_URL_OF_BOT`
-       6.  Change `DATABASE_URI = "dbname=tortk user=postgres password=your-pass host=127.0.0.1 port=5432"`
+       6.  Change `DATABASE_URL = "dbname=tortk user=postgres password=your-pass host=127.0.0.1 port=5432"`
 
            Enter the password in the above string.
        7.  After that run (You can use any port for the web interface here i am using 80).
@@ -189,7 +189,7 @@ Steps:-
   - Default Value :- `[]` 
   - Use :- Users and groups with ids here can use the bot.
 
-- `DATABASE_URI` = 
+- `DATABASE_URL` = 
   - Values :- Postgres database URL. Just replace your credentials from below. OR directly Paste the URI you obtained from a database hosting or somewhere else.
   - Default Value :- `dbname=tortk user=postgres password=your-pass host=127.0.0.1 port=5432`
   - Use :- Used to connect to DB. DB is used for many stuff in this bot. 
