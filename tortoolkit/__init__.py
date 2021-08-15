@@ -4,22 +4,26 @@ __version__ = "2.0.1.alpha-heroku"
 __author__ = "YashDK Github@yash-dk"
 #
 import logging
+
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s %(levelname)s %(threadName)s %(name)s %(message)s",
-    handlers=[logging.StreamHandler(),logging.FileHandler("torlog.txt")]
+    handlers=[logging.StreamHandler(), logging.FileHandler("torlog.txt")],
 )
 
-from tortoolkit.server.server import start_server
-from .database.dbhandler import TorToolkitDB,TtkTorrents, UserDB, TtkUpload
-from .core.varholdern import VarHolder
 import time
+
+from tortoolkit.server.server import start_server
+
+from .core.varholdern import VarHolder
+from .database.dbhandler import TorToolkitDB, TtkTorrents, TtkUpload, UserDB
+
 logging.info("Database created")
 upload_db = TtkUpload()
 var_db = TorToolkitDB()
 tor_db = TtkTorrents()
 user_db = UserDB()
-transfer = [0,0] # UP,DOWN
+transfer = [0, 0]  # UP,DOWN
 
 uptime = time.time()
 to_del = []

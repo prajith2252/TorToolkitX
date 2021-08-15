@@ -1,5 +1,6 @@
-from abc import ABC, abstractmethod
+from abc import ABC
 from datetime import datetime
+
 
 class BaseTask(ABC):
 
@@ -31,37 +32,39 @@ class BaseTask(ABC):
 
     @property
     def is_done(self):
-        return (self._is_done or self._is_errored or self._is_canceled or self._is_completed)
+        return (
+            self._is_done or self._is_errored or self._is_canceled or self._is_completed
+        )
 
     @property
     def is_completed(self):
         return self._is_completed
-    
+
     @property
     def is_canceled(self):
         return self._is_canceled
-    
+
     @property
     def is_errored(self):
         return self._is_errored
 
     def get_canceled_by(self):
         return self._canceled_by
-    
+
     def get_times(self):
         return self._time_added, self._time_completed
 
     async def execute(self):
         ...
-    
-    #@abstractmethod
+
+    # @abstractmethod
     def cancel(self, is_admin=False):
         ...
-    
-    #@abstractmethod
+
+    # @abstractmethod
     async def get_update(self):
         ...
-    
-    #@abstractmethod
+
+    # @abstractmethod
     def get_error_reason(self):
         ...
