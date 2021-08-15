@@ -64,7 +64,7 @@
 | ALD_USR | Authorized Chats | Your Group Chats ID + admins/owners id | True | Create a Super Group in Telegram, add `@missrose_bot` to the group, and send /id in the chat, to get this value. you can aswell add owner id/add by 1 space for some extra permissions.... |
 | BASE_URL_OF_BOT | Heroku App name web url | https://appname.herokuapp.com  | True | put entire appname url from `Heroku_APP_NAME` note: - the app doesnt need to be created just in `appname` above replace the name you gave in `HEROKU_APP_NAME`.... |
 | MAX_DL_LINK_SIZE | Max Directlink size in GBs. | 100 | True | Max Directlink size in GBs. |
-| MAX_MEGA_LIMIT| Max Mega Download size in GBs. | 100 | True | Max Mega Download size in GBs. |
+| MAX_MEGA_LIMIT | Max Mega Download size in GBs. | 100 | True | Max Mega Download size in GBs. |
 | MAX_TORRENT_SIZE | Max Torrent size in GBs. | 100 | True | Max Torrent size in GBs. |
 
 ## note:- the Postgres "DATABASE_URL" var will need to be added manually after deployment is done....go to https://elements.heroku.com/addons/heroku-postgresql and add it to your deployed app or else bot will crash and wont work..

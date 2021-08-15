@@ -23,3 +23,6 @@ jobs:
           HD_ALD_USR: ${{secrets.ALD_USR}}
           HD_BASE_URL_OF_BOT: ${{secrets.BASE_URL_OF_BOT}}
           HD_OWNER_ID: ${{secrets.OWNER_ID}}
+          HD_MAX_DL_LINK_SIZE: ${{secrets.MAX_DL_LINK_SIZE}}
+          HD_MAX_MEGA_LIMIT: ${{secrets.MAX_MEGA_LIMIT}}
+          HD_MAX_TORRENT_SIZE: ${{secrets.MAX_TORRENT_SIZE}}
