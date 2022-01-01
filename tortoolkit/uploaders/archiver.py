@@ -17,16 +17,16 @@ class Archiver:
         
         try:
             await self._update_message.edit(self._update_message.text+"\nStarting to Zip the contents. Please wait.")
-            zip_path = await add_to_zip(self._path, get_val("TG_UP_LIMIT"), self._split)
+            zip_path = await add_to_zip(self._path, get_val("TG_UP_LIMIT"), self._split, get_val("USE_RAR_SPLIT"))
             
             if zip_path is None:
-                await self._update_message.edit(self._update_message.text+"\nZip failed. Falback to normal.")
+                await self._update_message.edit(self._update_message.text+"\nZip failed. Fallbacked to normal.")
                 return False
             
             await self._update_message.edit(self._update_message.text+"\nZipping done. Now uploading.")
             await clear_stuff(self._path)
             return zip_path
         except:
-            await self._update_message.edit(self._update_message.text+"\nZip failed. Falback to normal.")
+            await self._update_message.edit(self._update_message.text+"\nZip failed. Fallbacked to normal.")
             return False
         
